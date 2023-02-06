@@ -3,6 +3,7 @@ $name = $_GET['word'];
 $paragraph = $_GET['paragraph'];
 $array = strlen($paragraph);
 $new_array = str_replace($name,'***',$paragraph);
+$len_new_array= strlen($new_array);
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +21,6 @@ $new_array = str_replace($name,'***',$paragraph);
     <hr>
     <h1>Paragrafo Censurato</h1>
     <p><?= $new_array?> </p>
-    <p>La lunghezza del testo è </p>
+    <p>La lunghezza del testo è <?= $len_new_array?></p>
 </body>
 </html>
